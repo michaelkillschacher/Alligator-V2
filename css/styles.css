@@ -25,15 +25,15 @@ h3{
 }
 
 h4{
-    font-size: 2rem;
+    font-size: 1.8em;
 }
 
 h5{
-    font-size: 1.8rem;
+    font-size: 1.7em;
 }
 
 h6{
-    font-size: 1.7rem;
+    font-size: 1.6em;
 }
 
 
@@ -115,7 +115,7 @@ h6{
 
 p{
     color: #004141;
-    font-size: 1.1rem;
+    font-size: 1.5em;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -150,9 +150,16 @@ p{
 }
 
 
-   .row{
+.row{
     width: 100%;   
    }
+
+
+
+
+
+
+/* ---------------NAVBAR */
 
 
 .navbar-brand{
@@ -161,18 +168,35 @@ p{
 
 
 
-.navbar-custom {
-    color: #A0DCE6;
-    font-size: clamp(1.4rem, 4.5vw, 1.8rem);
-    line-height: 80px;
-    height: 7vh;
-
+/* Ändere die Schriftgröße und Farbe für normale Links */
+.navbar-nav .nav-link {
+    font-size: 25px; /* Beispielgröße - ändere nach Bedarf */
+    color: rgb(160, 220, 230);
+    transition: color 0.3s, font-size 0.3s; /* Animation für sanften Übergang hinzufügen */
 }
 
-.navbar-custom:hover{
-    color: #fa6400;
-    font-size: clamp(1.5rem, 4.5vw, 1.9rem);
+/* Ändere die Schriftgröße und Farbe beim Hovern über Links */
+.navbar-nav .nav-link:hover {
+    color: rgb(250, 100, 0);
+    font-size: 25px; /* Beispielgröße - ändere nach Bedarf */
 }
+
+
+
+
+/* Ändere die Größe des Hamburger-Icons */
+.navbar-toggler-icon {
+    font-size: 40px; /* Beispielgröße - ändere nach Bedarf */
+}
+
+
+.button-marging{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
 
 .bg-alligator{
     background-color: #004141;
@@ -182,35 +206,348 @@ p{
     background-color: #A0DCE6;
 }
 
-.video-process-section{
-    background-color: rgb(106, 156, 172);
-    max-width: 100%;
+
+
+
+
+/* Standard-Stile für den Text */
+.desktop-text h1,
+.desktop-text p,
+.desktop-text ul,
+.desktop-text li {
+    transition: all 1s ease;
+    color:#004141;
 }
 
+/* Textstil bei Hover auf Desktop-Geräten ändern */
+.desktop-text:hover h1,
+.desktop-text:hover p {
+    color:#004141;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.desktop-text:hover ul,
+.desktop-text:hover li {
+    color:#004141;
+}
 
 
 /* Andere CSS-Stile... */
 
+
+
+
+
+.tech-layout{
+    width: 100%;
+    }
+
+
+    .foto-team{
+        height: 250px;
+    }
+
+
+
+
+
+
+    
+      
+    .container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+      
+      .timeline-v2 {
+        margin-bottom: 0;
+        list-style: none;
+        padding-left: 140px;
+        padding-right: 20px;
+        position: relative;
+      
+        .media {
+            display: flex;
+            padding: 10px;
+            background-color: rgb(255, 255, 255);
+            -webkit-border-radius: 3px;
+            border-radius: 20px;
+            align-items: center;
+            border: 1px solid rgb(0, 65, 65); /* Hinzugefügter Border */
+          }
+          .media-left {
+            margin-right: 10px; /* Fügt einen Abstand zwischen dem Bild und dem Text hinzu */
+          }
+          
+          .media-object {
+            width: auto;
+            height: 100%; /* Setzt die Höhe auf 100% des Elternelements (.media) */
+            max-height: 200px; /* Begrenzt die maximale Höhe des Bildes */
+            border-radius: 10px;
+          }
+          
+          .media-body {
+            flex: 1; /* Nimmt den verfügbaren Platz ein und ermöglicht, dass der Text den Raum ausfüllt */
+          }
+      
+
+        /* titel */
+        .media-body {
+          &[data-time]::after {
+            content: attr(data-time);
+            position: absolute;
+            top: 0;
+            right: -10px;
+            padding: 5px 10px;
+            font-size: 1.5em;
+            color: rgb(160, 220, 230);
+            background-color: rgb(0, 65, 65);
+
+      
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            
+            
+            -webkit-transition: background-color 0.2s;
+            transition: background-color 0.2s;
+          }
+      
+          p:last-child {
+            margin-bottom: 0;
+          }
+          
+
+        }
+
+
+        
+      
+        /* Jahr */
+        > li {
+          position: relative;
+      
+          &[data-date]::before {
+            content: attr(data-date);
+            position: absolute;
+            top: 44px;
+            right: 100%;
+            margin-right: 20px;
+            white-space: nowrap;
+            font-weight: 300;
+            font-size: 1.5em;
+            font-family: "arial nova", Arial, Helvetica, sans-serif; 
+            color: rgb(0, 65, 65);
+          }
+      
+          &[data-date] {
+            /* kreis */
+            > div .media::before {
+              content: '';
+              position: absolute;
+              top: 47px;
+              left: -25px;
+              width: 12px;
+              height: 12px;
+              background-color: rgb(0, 65, 65);
+              border: 2px solid rgb(250, 100, 0);
+              z-index: 1;
+      
+              -webkit-border-radius: 50%;
+              border-radius: 50%;
+              
+              -webkit-transition-property: top, left, width, height, border-color;
+              transition-property: top, left, width, height, border-color;
+              
+              -webkit-transition-duration: 0.2s;
+              transition-duration: 0.2s;
+            }
+      
+            > div + div .media::before {
+              border-color: #4caf50;
+            }
+      
+            > div,
+            > div + div {
+              .media:hover::before {
+                border-color: rgb(0, 65, 65);
+                background-color: rgb(0, 65, 65);
+              }
+            }
+          }
+      /* linie */
+          &:not(:last-child) > div:before,
+          &:last-child > div:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            top: 53px;
+            left: -20px;
+            height: 100%;
+            border: 1px solid rgb(250, 100, 0);
+          }
+      
+          &:not(:last-child) > div:not(:last-child):before,
+          &:last-child > div:not(:last-child)::before {
+            border-style: dashed;
+          }
+      
+          > div {
+            margin-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: relative;
+      
+            &::after {
+                content: '';
+                position: absolute;
+                top: 47px;
+                left: -10px;
+                border-style: solid;
+                border-width: 6px 12px 6px 0;
+                border-color: transparent #ffffff transparent transparent;
+                opacity: 0; /* Start with zero opacity (not visible) */
+                transition: opacity 0.0s; /* Add a transition for smooth effect */
+              }
+              
+              &:hover::after {
+                opacity: 1; /* Pfeil*/
+                border-color: transparent rgb(0, 65, 65) transparent transparent; /* Change border color to red on hover */
+              }
+            
+            &:hover .media-body[data-time]::after {
+                border-color: rgb(0, 65, 65);
+                background-color: rgb(106, 156, 172);
+            }
+          }
+        }
+      }
+      
+
+
+
+      @media (max-width: 1000px) {
+        .timeline-v2 > li[data-date="Heute"]::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 2px;
+            height: 0; /* Setzen Sie die Höhe auf 0, um das vertikale Stück zu verbergen */
+            border-left: 2px solid rgb(250, 100, 0);
+            border-top: none;
+        }
+    
+        .media {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .media-left {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .media-object {
+            position: relative;
+            top: 30px; /* Ändern Sie dies auf den gewünschten Abstand nach unten */
+        }
+    
+        /* Weitere Stile für den Hover-Zustand hier ... */
+    }
+    
+    /* Neue Styles für den Hover-Zustand */
+    .timeline-v2 > li > div:hover .media {
+        background-color: rgb(0, 65, 65);
+        border-color: rgb(0, 65, 65);
+        box-shadow: 0 0 0px 0px #ff0000;
+    }
+    
+    .media-body:hover p {
+        color: rgb(160, 220, 230);
+    }
+    
+    .timeline-v2 > li > div:hover .media-body[data-time]::after {
+        border-color: rgb(106, 156, 172);
+        background-color: rgb(160, 220, 230);
+        color: rgb(0, 65, 65);
+    }
+    
+    .timeline-v2 > li[data-date="Heute"] {
+        position: relative;
+    }
+    
+    .timeline-v2 > li[data-date="Heute"]::before {
+        content: '';
+        position: absolute;
+        top: 53px;
+        left: -20px;
+        width: 100%;
+        border-top: 2px solid rgb(250, 100, 0);
+        z-index: 1;
+    }
+    
+
+
+/* ... (Ihr bestehender CSS-Code bleibt unverändert) ... */
+
+/* Hinzufügen einer neuen Klasse für den Hover-Zustand von .media */
+.timeline-v2 > li > div:hover .media.hovered {
+    background-color: rgb(0, 65, 65);
+    border-color: rgb(0, 65, 65);
+    box-shadow: 0 0 0px 0px #ff0000;
+}
+
+/* Styling des Textes innerhalb von .media beim Hover */
+.timeline-v2 > li > div:hover .media.hovered .media-body[data-time]::after {
+    border-color: rgb(106, 156, 172);
+    background-color: rgb(160, 220, 230);
+    color: rgb(0, 65, 65);
+}
+
+.timeline-v2 > li > div:hover .media.hovered .media-body p {
+    color: rgb(160, 220, 230);
+}
+
+/* ... (Ihr bestehender CSS-Code bleibt unverändert) ... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.video-process-section {
+    background-color: rgb(106, 156, 172);
+    max-width: 100%;
+    display: inline-block; /* Change this line */
+}
+
+
+
 .video-container {
+    display: flex;
+    align-items: center; /* Zentrieren vertikal */
     position: relative;
     width: 100%;
 }
 
+
+
+
+
 .content-container {
-    float: right;
+    /* Removed float: right; */
     width: 100%;
 }
 
@@ -222,6 +559,7 @@ p{
     float: right;
 }
 
+
 .overlay-image {
     position: absolute;
     top: 0;
@@ -231,17 +569,25 @@ p{
     z-index: 2;
 }
 
+
+
+
 .desktop-text {
     display: block;
     position: absolute;
-    top: 0;
+    top: 50%; /* Vertikale Ausrichtung auf 50% des übergeordneten Containers */
     left: 0;
+    transform: translateY(-50%); /* Korrektur, um den Text genau in der Mitte zu zentrieren */
     z-index: 3;
     width: 75%;
     padding: 20px;
+    box-sizing: border-box; /* Beachte auch die Box-Größe, um das Padding in die Berechnung einzubeziehen */
 }
 
-@media only screen and (max-width: 1600px) {
+
+
+
+@media only screen and (max-width: 1400px) {
     .desktop-text {
         display: none;
     }
@@ -268,28 +614,7 @@ p{
 
 
 
-/* Standard-Stile für den Text */
-.desktop-text h1,
-.desktop-text p,
-.desktop-text ul,
-.desktop-text li {
-    transition: all 0.3s ease;
-    color:rgb(160, 220, 230)
-}
 
-/* Textstil bei Hover auf Desktop-Geräten ändern */
-.desktop-text:hover h1,
-.desktop-text:hover p {
-    color:#004141;
-}
-
-.desktop-text:hover ul,
-.desktop-text:hover li {
-    color:#004141;
-}
-
-
-/* Andere CSS-Stile... */
 
 
 
@@ -360,7 +685,7 @@ p{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 55, 65, 0);
-    transition: background-color 0.5s ease;
+    transition: background-color 1s ease;
 }
 
 .PlanarFeedtrough.touch::before {
@@ -386,7 +711,7 @@ p{
 .PlanarFeedtrough .hidden-text {
     display: none;
     position: absolute;
-    z-index: 2; /* Setzt die Ebene des Textes über dem Hintergrund */
+    z-index: 2;
 }
 
 .PlanarFeedtrough.touch .hidden-text {
@@ -656,6 +981,12 @@ padding-bottom: 15px;
     padding-bottom: 4vw;
 }
 
+.top-bottom-padding-small{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+
 .top-poadding-small{
     padding-top: 16px;
 }
@@ -668,7 +999,9 @@ padding-bottom: 15px;
     padding-left: 10px;
 }
 
-
+.margin-right{
+    margin-left: -100px;
+}
 
 
 .padding-right{
@@ -727,7 +1060,7 @@ padding-bottom: 15px;
     margin-right: auto;
 }
 
-.left-align{
+.featcher_box{
     text-align: left;
 }
 
@@ -815,10 +1148,7 @@ height: 350px;
     text-align: center;
 }
 
-.navbar-button{
-    height: 5vh;
-    width: 8vh;
-}
+
 
 .title-padding-top{
 padding-top: 7vw;
